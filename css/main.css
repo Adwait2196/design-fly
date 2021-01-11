@@ -1,0 +1,39 @@
+/*
+* Theme Name: DesignFly
+*/
+.site-header {
+  display: flex;
+  min-height: 105px;
+  box-shadow: 5px 1px 5px #262626;
+  padding: 1%;
+}
+
+.site-branding {
+  width: 50%;
+  text-align: center;
+}
+
+.site-logo__link {
+  text-align: center;
+}
+
+.main-navigation {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.site-navmenu__list > .menu-item a {
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #222;
+  transition: 0.5s ease-in-out;
+  justify-content: space-evenly;
+}
+
+.site-navmenu__list > .menu-item a:hover {
+  background-color: #ef4643;
+  color: #fff;
+}
