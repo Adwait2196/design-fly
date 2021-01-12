@@ -33,8 +33,8 @@
 				}
 				else {
 			?>
-			<a href=" <?php get_site_url(); ?> " class="site-logo-link">
-				<img src=" <?php esc_attr_e( get_theme_file_uri( 'assets/images/logo.png' ) ); ?> " alt="Logo" /> <!-- Setting the custom logo as default image selected.-->
+			<a href=" <?php get_site_url(); ?> " class="site-logo__link">
+				<img class="site-logo__image" src=" <?php esc_attr_e( get_theme_file_uri( '/assets/images/logo.png' ) ); ?> " alt="Logo" style="min-width: 25%;" /> <!-- Setting the custom logo as default image selected.-->
 			</a>
 			<?php
 				}
