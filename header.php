@@ -56,7 +56,7 @@
 			?>
 			<form class="site-searchfield" action="<?php echo home_url( '/' ); ?>" method="get">
 				<input type="text" class="site-searchbox" value="<?php the_search_query(); ?>" id="search" />
-				<input type="image" id="site-searchbtn" alt="Search" src=" <?php bloginfo( 'template_url' ); ?>/assets/images/search-icon-normal.png ">
+				<input type="image" id="site-searchbtn" alt="Search" src=" <?php esc_attr( bloginfo( 'template_url' ) ); ?>/assets/images/search-icon-normal.png ">
 			</form>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
