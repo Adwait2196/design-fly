@@ -37,6 +37,7 @@
 
 .site-navmenu__list > .menu-item a {
   font-family: 'Open sans', sans-serif;
+  font-weight: bold;
   font-size: 14px;
   color: #222222;
   padding: 10px;
@@ -60,3 +61,19 @@
 /**************************************
 * Footer Styling
 **************************************/
+.site-info {
+  font-family: 'Open sans', sans-serif;
+  font-size: 14px;
+  color: #62585f;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-text a {
+  color: #ef4634;
+  text-decoration: none;
+}
+
+  .footer-text a:hover {
+    text-decoration: underline;
+  }
