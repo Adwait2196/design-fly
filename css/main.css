@@ -129,3 +129,26 @@
   margin-top: -10%;
   padding: 5%;
 }
+
+.portfolio-home {
+  width: 68%;
+  margin: auto;
+}
+
+.portfolio-hometop {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+
+.portfolio-hometop__title {
+  font-family: 'Open sans', sans-serif;
+  font-size: 45px;
+  color: #62585f;
+  text-shadow: 2px #ffffff;
+}
+
+.portfolio-hometop__btn {
+  height: 100%;
+}
