@@ -1,39 +1,62 @@
 /*
 * Theme Name: DesignFly
 */
+
+/**************************************
+* Header Styling
+**************************************/
 .site-header {
   display: flex;
+  flex-wrap: wrap;
   min-height: 105px;
-  box-shadow: 5px 1px 5px #262626;
-  padding: 1%;
+  box-shadow: 5px 1px 7px #222222;
+  width: 100%;
 }
 
 .site-branding {
-  width: 50%;
+  width: 45vw;
   text-align: center;
 }
 
-.site-logo__link {
-  text-align: center;
+.site-logo__image {
+  margin-top: 15px;
 }
 
 .main-navigation {
   display: flex;
-  width: 50%;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
   justify-content: space-evenly;
+  width: 55vw;
+  align-items: center;
+}
+
+.site-navmenu__list > .menu-item {
+  padding: 10px;
 }
 
 .site-navmenu__list > .menu-item a {
-  padding: 4px 10px;
-  border-radius: 3px;
+  font-family: 'Open sans', sans-serif;
   font-size: 14px;
-  color: #222;
-  transition: 0.5s ease-in-out;
-  justify-content: space-evenly;
+  color: #222222;
+  padding: 10px;
+  border-radius: 3px;
+  transition: 0.3s ease-in-out;
 }
 
-.site-navmenu__list > .menu-item a:hover {
-  background-color: #ef4643;
-  color: #fff;
+  .site-navmenu__list > .menu-item a:hover {
+    background-color: #ef4634;
+    color: #ffffff;
+  }
+
+.site-searchbox {
+  width: 150px;
+  height: 30px;
+  background-color: #ffffff;
+  border: 1px solid #62585f;
+  border-radius: 3px;
 }
+
+/**************************************
+* Footer Styling
+**************************************/
