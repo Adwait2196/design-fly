@@ -180,3 +180,9 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+*	Function to create custom post type of Portfolio.
+*/
+require get_template_directory() . '/inc/custom-post-type-function.php';
+add_action( 'init', 'designfly_custom_post_type' );
