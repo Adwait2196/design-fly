@@ -60,3 +60,41 @@
 			</form>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+
+	<?php
+		if( is_front_page() ) {
+			?>
+			<!-- Code for displaying home banner. -->
+			<div class="intro-container">
+				<h1 class="intro-heading"><?php esc_html( the_title() ); ?></h1>
+				<div class="intro-info"><?php esc_html( the_content() ); ?></div>
+			</div>
+			<?php
+		}
+	?>
+
+	<div class="features-container">
+		<div class="features-content">
+			<img style="height: 50px;" src="<?php esc_attr_e( get_theme_file_uri( '/assets/images/feature-icons-1.png' ) ) ?>" />
+			<div class="feature-info">
+				<a class="feature-info__link" href="#"><span class="feature-info__title">Advertising</span></a>
+				<p class="feature-info__para">Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+			</div>
+		</div>
+		<div class="features-content">
+			<img style="height: 50px;" src="<?php esc_attr_e( get_theme_file_uri( '/assets/images/feature-icons-2.png' ) ) ?>" />
+			<div class="feature-info">
+				<a class="feature-info__link" href="#"><span class="feature-info__title">Multimedia</span></a>
+				<p class="feature-info__para">Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+			</div>
+		</div>
+		<div class="features-content">
+			<img style="height: 50px;" src="<?php esc_attr_e( get_theme_file_uri( '/assets/images/feature-icons-3.png' ) ) ?>" />
+			<div class="feature-info">
+				<a class="feature-info__link" href="#"><span class="feature-info__title">Photography</span></a>
+				<p class="feature-info__para">Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+			</div>
+		</div>
+	</div>
+	<br/>
+	<br/>
