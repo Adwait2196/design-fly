@@ -64,7 +64,9 @@
   font-family: 'Open sans', sans-serif;
   font-size: 14px;
   color: #62585f;
-  width: 100%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .site-contactinfo {
@@ -131,24 +133,46 @@
 }
 
 .portfolio-home {
-  width: 68%;
+  width: 62%;
   margin: auto;
+  font-family: 'Open sans', sans-serif;
 }
 
 .portfolio-hometop {
-  display: flex;
-  margin: auto;
-  justify-content: space-between;
-  vertical-align: middle;
+ display: flex;
+ justify-content: space-between;
 }
 
 .portfolio-hometop__title {
-  font-family: 'Open sans', sans-serif;
+  margin: 0;
   font-size: 45px;
   color: #62585f;
   text-shadow: 2px #ffffff;
 }
 
 .portfolio-hometop__btn {
-  height: 100%;
+  text-decoration: none;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.portfolio-hometop__btntxt {
+  color: #ffffff;
+  background-color: #222222;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.portfolio-home__images {
+  width: 300px;
+  height: 210px;
+  border-radius: 10px;
+}
+
+.portfolio-images__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  justify-content: center;
 }
