@@ -13,7 +13,7 @@
 }
 
 .site-branding {
-  width: 45vw;
+  width: 40%;
   text-align: center;
 }
 
@@ -26,7 +26,7 @@
   flex-direction: row;
   flex-wrap: wrap-reverse;
   justify-content: space-evenly;
-  width: 55vw;
+  width: 60%;
   align-items: center;
 }
 
@@ -102,34 +102,36 @@
 **************************************/
 .intro-container {
   display: flex;
-  background-size: contain;
+  flex-direction: column;
+  background-image: url( '../assets/images/full-slider.png' );
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
-  text-align: center;
-}
-
-.intro-content {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15%;
-  width: 50%;
+  min-height: 544px;
+  max-height: 544px;
 }
 
 .intro-heading {
+  margin: 0;
+  margin-top: 20%;
   font-size: 70px;
   font-weight: bold;
   color: #ffffff;
   text-shadow: 2px 3px 5px #950904;
+  text-align: center;
 }
 
 .intro-info {
+  margin: 0;
   font-family: 'Open sans', sans-serif;
   font-size: 16px;
   color: #ffffff;
   line-height: 24px;
-  margin-top: -10%;
-  padding: 5%;
+  text-align: center;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .portfolio-home {
@@ -231,4 +233,52 @@
 
 .post-maincontent .bars {
   font-size: 26px;
+}
+
+/**************************************
+* Features area styling
+**************************************/
+.features-container {
+  background-image: url( '../assets/images/features-repeatable-bg.png' );
+  background-size: auto;
+  background-repeat: repeat-x;
+  background-position: center;
+  height: 101px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+.features-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-info {
+  padding: 3%;
+}
+
+.feature-info__link {
+  text-decoration: none;
+  font-family: 'Open sans', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.feature-info__title {
+  color: #ef4634;
+  text-shadow: 2px #ffffff;
+  transition: 0.3s ease-in-out;
+}
+
+  .feature-info__title:hover {
+    color: #222222;
+  }
+
+.feature-info__para {
+  margin: 0;
+  font-size: 13px;
+  color: #333333;
 }
