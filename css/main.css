@@ -176,3 +176,59 @@
   grid-gap: 10px;
   justify-content: center;
 }
+
+/**************************************
+* Single Post Styling
+**************************************/
+.post-structure {
+  display: flex;
+}
+
+.post-maincontent {
+  width: 70%;
+  padding: 3%;
+}
+
+.post-sidebar {
+  width: 30%;
+  padding: 3%;
+}
+
+/**************************************
+* Portfolio Post Styling
+**************************************/
+.post-maincontent .entry-title {
+  font-size: 35px;
+  color: #62585f;
+  font-family: 'Open sans'. sans-serif;
+  text-shadow: 2px #ffffff;
+}
+
+.post-maincontent .url {
+  color: #ef4634;
+  text-decoration: none;
+}
+
+.post-maincontent .posted-on a {
+  color: #404040;
+  text-decoration: none;
+}
+
+.post-maincontent .entry-meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-maincontent .nav-previous a {
+  color: #ef4634;
+  text-decoration: none;
+}
+
+.post-maincontent .logged-in-as a {
+  color: #ef4634;
+  text-decoration: none;
+}
+
+.post-maincontent .bars {
+  font-size: 26px;
+}
