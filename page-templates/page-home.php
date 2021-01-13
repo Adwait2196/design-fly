@@ -46,7 +46,7 @@
         while( $query -> have_posts() ) {
           $query -> the_post();
           echo '<a href="'.esc_attr( get_permalink() ).'" rel="lightbox">';
-          echo '<img class="portfolio-home__images" src="'. get_the_post_thumbnail_url() .'">';
+          echo '<img class="portfolio-home__images" src="'. get_the_post_thumbnail_url() .'"/>';
           echo '</a>';
         }
     ?>
