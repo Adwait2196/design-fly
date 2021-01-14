@@ -12,13 +12,14 @@ get_header();
 
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $args = array(
-  'post_type'     => 'df-portfolio',
-  'posts_per_page' => 15,
-  'paged'         => $paged
+  'post_type'       => 'df-portfolio',
+  'posts_per_page'  => 15,
+  'paged'           => $paged
 );
 
 $portfolio_query = new WP_Query ( $args );
 ?>
+<main id="primary" class="site-main">
   <div class="portfolio-container">
     <div class="portfolio-header">
       <h2 class="portfolio-header__heading"><span class="portfolio-heading__text">DESIGN IS THE SOUL</span></h2>
@@ -51,5 +52,6 @@ $portfolio_query = new WP_Query ( $args );
     <?php design_fly_pagination_bar ( $portfolio_query ); ?>
   </div>
   <hr class="horizontal-bar2"/>
+</main>
 <?php
 get_footer();
