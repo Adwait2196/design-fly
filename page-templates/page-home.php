@@ -19,10 +19,10 @@
   <?php
   $args = array(
     'post_type'     => 'df-portfolio',
-    'post_per_page' => 6
+    'posts_per_page' => 6
   );
 
-  $query = new WP_Query( $args );
+  $home_query = new WP_Query( $args );
   ?>
   <div class="portfolio-home">
     <div class="portfolio-hometop">
@@ -34,15 +34,16 @@
     <hr/>
     <div class="portfolio-images__container">
     <?php
-      if( $query -> have_posts() ) {
-        while( $query -> have_posts() ) {
-          $query -> the_post();
+      if( $home_query -> have_posts() ) {
+        while( $home_query -> have_posts() ) {
+          $home_query -> the_post();
           echo '<a href="'.esc_attr( get_permalink() ).'" rel="lightbox">';
           echo '<img class="portfolio-home__images" src="'. get_the_post_thumbnail_url() .'"/>';
           echo '</a>';
         }
     ?>
-  </div>
+    </div>
+    <hr class="horizontal-bar3"/>
   </div>
   <?php
       }
