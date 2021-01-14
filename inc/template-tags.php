@@ -178,7 +178,6 @@ function design_fly_pagination_bar ( $custom_query ) {
 		) );
 
 		if( is_array( $pages ) ) {
-			$paged = ( get_query_var( 'paged' ) == 0 ) ? 1 : get_query_var( 'paged' );
 			echo '<div class="pagination">';
 			foreach( $pages as $page ) {
 				echo $page;
