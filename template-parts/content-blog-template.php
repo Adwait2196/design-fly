@@ -22,11 +22,16 @@
         if( has_post_thumbnail() ) {
           ?>
           <div class="blog-thumbnail">
-            <?php the_post_thumbnail( 'medium' ); ?>
+            <?php the_post_thumbnail(); ?>
           </div>
           <div class="blog-content">
             <div class="blog-content__header">
-                <p class="blog-content__author"> by <a class="blog-author__permalink" href="<?php get_the_author_link(); ?>"><span class="blog-author__name"><?php echo get_author_name(); ?></span></a> on <?php echo get_the_date( 'd M Y' ); ?></p>
+                <p class="blog-content__author"> by
+                  <a class="blog-author__permalink" href="<?php echo get_the_author_meta( 'user_url' ); ?>">
+                    <span class="blog-author__name"><?php echo get_the_author_meta( 'display_name' ); ?>
+                    </span>
+                  </a> on <?php echo get_the_date( 'd M Y' ); ?>
+                </p>
                 <p class="blog-content__comments"><?php echo get_comments_number(); ?>Comments(s)</p>
             </div>
             <hr class="horizontal-bar1"/>
@@ -40,7 +45,12 @@
           ?>
           <div class="blog-content">
             <div class="blog-content__header">
-                <p class="blog-content__author"> by <a class="blog-author__permalink" href="<?php get_the_author_link(); ?>"><span class="blog-author__name"><?php echo get_author_name(); ?></span></a> on <?php echo get_the_date( 'd M Y' ); ?></p>
+                <p class="blog-content__author"> by
+                  <a class="blog-author__permalink" href="<?php echo get_the_author_meta( 'user_url' ); ?>">
+                    <span class="blog-author__name"><?php echo get_the_author_meta( 'display_name' ); ?>
+                    </span>
+                  </a> on <?php echo get_the_date( 'd M Y' ); ?>
+                </p>
                 <p class="blog-content__comments"><?php echo get_comments_number(); ?>Comments(s)</p>
             </div>
             <hr class="horizontal-bar1"/>
