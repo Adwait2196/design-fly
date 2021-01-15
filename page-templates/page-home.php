@@ -27,11 +27,10 @@
   <div class="portfolio-home">
     <div class="portfolio-hometop">
       <p class="portfolio-hometop__title"><?php esc_html_e( 'D\'SIGN IS THE SOUL' ); ?></p>
-      <a class="portfolio-hometop__btn" href="<?php esc_attr_e( get_permalink( '#' ) ) ?>">
+      <a class="portfolio-hometop__btn" href="<?php esc_attr_e( get_permalink( get_page_by_title( 'Portfolio' ) ) ); ?>">
         <span class="portfolio-hometop__btntxt"><?php esc_html_e( 'View All', 'design-fly' ); ?></span>
       </a>
     </div>
-    <hr/>
     <div class="portfolio-images__container">
     <?php
       if( $home_query -> have_posts() ) {
@@ -43,7 +42,6 @@
         }
     ?>
     </div>
-    <hr class="horizontal-bar3"/>
   </div>
   <?php
       }
