@@ -33,7 +33,7 @@
 				}
 				else {
 			?>
-			<a href=" <?php get_site_url(); ?> " class="site-logo__link">
+			<a href="<?php get_site_url(); ?>" class="site-logo__link">
 				<img class="site-logo__image" src=" <?php esc_attr_e( get_theme_file_uri( '/assets/images/logo.png' ) ); ?> " alt="Logo" style="min-width: 25%;" /> <!-- Setting the custom logo as default image selected.-->
 			</a>
 			<?php
@@ -54,11 +54,11 @@
 				)
 			);
 			?>
-			<form class="site-searchfield" action="<?php echo home_url( '/' ); ?>" method="get">
-				<input type="text" class="site-searchbox" value="<?php the_search_query(); ?>" id="search" />
-				<input type="image" id="site-searchbtn" alt="Search" src=" <?php esc_url( bloginfo( 'template_url' ) ); ?>/assets/images/search-icon-normal.png ">
-			</form>
 		</nav><!-- #site-navigation -->
+		<form class="site-searchfield" action="<?php echo home_url( '/' ); ?>" method="get">
+			<input type="text" class="site-searchbox" value="<?php the_search_query(); ?>" id="search" />
+			<input type="image" class="site-searchbox__image" id="site-searchbtn" alt="Search" src=" <?php esc_url( bloginfo( 'template_url' ) ); ?>/assets/images/search-icon-normal.png ">
+		</form>
 	</header><!-- #masthead -->
 
 	<?php
