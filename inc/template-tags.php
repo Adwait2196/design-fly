@@ -153,6 +153,86 @@ if ( ! function_exists( 'design_fly_post_thumbnail' ) ) :
 	}
 endif;
 
+/**
+* Displays the pagination.
+*
+* Wraps the pagination in a div with id 'pagination' and echoes it.
+*
+* @param $custom_query requires the query object to get pagination
+*/
+
+function design_fly_pagination_bar ( $custom_query ) {
+	$total_pages = $custom_query -> max_num_pages;
+	$big = 99999;
+
+	if( $total_pages > 1 ) {
+		$current_page = max(1, get_query_var( 'paged' ) );
+		$pages = paginate_links ( array(
+			'base'				=> str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+			'format'			=> '?paged=%#%',
+			'current'			=> $current_page,
+											'total'			=> $total_pages,
+											'type'			=> 'array',
+											'prev_text'	=> '<img class="pagination-arrow-left" src="'. get_theme_file_uri( '/assets/images/pagination-arrow.png' ) .'">',
+											'next_text'	=> '<img class="pagination-arrow-right" src="'. get_theme_file_uri( '/assets/images/pagination-arrow.png' ) .'">',
+		) );
+
+		if( is_array( $pages ) ) {
+			echo '<div class="pagination">';
+			foreach( $pages as $page ) {
+				echo $page;
+			}
+			echo '</div>';
+		}
+	}
+}
+
+function design_fly_custom_comments($comment, $args, $depth) {
+
+    if ( 'div' === $args[ 'style' ] ) {
+        $tag       = 'div';
+        $add_below = 'comment';
+    } else {
+        $tag       = 'li';
+        $add_below = 'div-comment';
+    }
+	?>
+
+    <<?php echo $tag ?> <?php comment_class( empty( $args[ 'has_children' ] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>">
+    <?php if ( 'div' != $args[ 'style' ] ) : ?>
+        <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
+	<?php endif; ?>
+
+    <div class="comment-author vcard">
+        <?php printf( __( '<cite class="fn">%s</cite> <span class="says">said on </span>' ), get_comment_author_link() ); ?>
+	</div>
+
+	<div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
+		<?php
+		/* translators: 1: date, 2: time */
+		printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)' ), '  ', '' );
+		?>
+	</div>
+
+	<?php if ( $comment->comment_approved == '0' ) : ?>
+         <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em>
+          <br />
+    <?php endif; ?>
+
+
+    <?php comment_text(); ?>
+
+    <div class="reply">
+        <?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args[ 'max_depth' ] ) ) ); ?>
+    </div>
+
+	<?php if ( 'div' != $args[ 'style' ] ) : ?>
+	</div>
+
+    <?php endif; ?>
+    <?php
+}
+
 if ( ! function_exists( 'wp_body_open' ) ) :
 	/**
 	 * Shim for sites older than 5.2.

@@ -1,0 +1,81 @@
+/*******************************************
+* Here all the media queries will sotred.
+*******************************************/
+
+/**************************************
+* Media queries for tab-pro view.
+**************************************/
+@media only screen and ( min-width : 950px ) and ( max-width : 1024px ) {
+  /* Navbar styling */
+  .site-branding {
+    width: 30%;
+  }
+  .main-navigation {
+    width: 45%;
+  }
+  .site-searchfield {
+    width: 15%;
+  }
+
+  /* Home banner styling */
+  .intro-container {
+    max-height: 400px;
+    min-height: 400px;
+  }
+  .intro-heading {
+    font-size: 55px;
+  }
+  .intro-info {
+    font-size: 20px;
+    width: 60%;
+  }
+
+  /* Features section styling */
+  .features-container {
+    padding-left: 10%;
+    padding-right: 5%;
+  }
+  .feature-info__para {
+    font-size: 16px;
+  }
+
+  /* Portfolio home styling */
+  .portfolio-home {
+    width: 80%;
+  }
+
+  /* Footer styling */
+  .site-info {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  /* Portfolio main-page styling */
+  .portfolio-container {
+    width: 80%;
+  }
+
+  /* Blogs page styling */
+  .blogs-container {
+    grid-template-columns: 65% 30%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .portfolio-widget__links {
+    width: 60px;
+    height: 60px;
+  }
+  .portfolio-widgcontainer {
+    grid-row-gap: 10px;
+  }
+  .blog-content {
+    font-size: 16px;
+  }
+}
+
+/**************************************
+* Media queries for tab view.
+**************************************/
+@media only screen and ( min-width : 768px ) and ( max-width : 949px ) {
+  
+}
