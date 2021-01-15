@@ -84,6 +84,14 @@
   padding: 2%;
 }
 
+.contactus-icons__links {
+  text-decoration: none;
+}
+
+.contactus-icons__links img {
+  height: 30px;
+}
+
 .site-copyright {
   text-align: center;
 }
@@ -96,6 +104,10 @@
   .footer-text a:hover {
     text-decoration: underline;
   }
+
+.horizontal-bar4 {
+  width: 69%;
+}
 
 /**************************************
 * Home template page Styling
@@ -232,6 +244,11 @@
   text-decoration: none;
 }
 
+.post-maincontent .nav-next a {
+  color: #ef4634;
+  text-decoration: none;
+}
+
 .post-maincontent .logged-in-as a {
   color: #ef4634;
   text-decoration: none;
@@ -239,6 +256,12 @@
 
 .post-maincontent .bars {
   font-size: 26px;
+  margin: 0;
+}
+
+.post-thumbnail img {
+  width: 100%;
+  max-height: 400px;
 }
 
 /**************************************
@@ -348,12 +371,6 @@
   margin-right: auto;
 }
 
-.portfolio-images {
-  height: 210px;
-  width: 300px;
-  border-radius: 10px;
-}
-
 .horizontal-bar1 {
   width: 100%;
   color: black;
@@ -408,6 +425,55 @@
   color: #222222;
 }
 
+.portfolio-links {
+  position: relative;
+}
+
+.portfolio-images {
+  height: 210px;
+  width: 300px;
+  border-radius: 10px;
+  opacity: 1;
+  display: block;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.portfolio-image__viewbtn {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+  .portfolio-links:hover .portfolio-images {
+    opacity: 0.4;
+  }
+
+  .portfolio-links:hover .portfolio-image__viewbtn {
+    opacity: 1;
+  }
+
+  .portfolio-viewing__btn {
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+  }
+
+  .portfolio-favicon__image {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 /**************************************
 * Blogs Page Styling
 **************************************/
@@ -416,8 +482,8 @@
   width: 100%;
   grid-template-columns: 65% 30%;
   justify-content: space-between;
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .blogs-maincontent__heading {
@@ -476,7 +542,7 @@
   display: flex;
   width: 100%;
   margin-top: 2%;
-  height: 220px;
+  height: 180px;
 }
 
 .blog-content {
@@ -509,8 +575,154 @@
   text-decoration: none;
 }
 
-.blog-thumbnail .wp-post-image{
+.blog-thumbnail>.wp-post-image{
   width: 220px;
   height: 153px;
   border-radius: 10px;
+}
+
+.blog-content__info p {
+  margin: 0;
+}
+
+.blogs-container .pagination {
+  margin-bottom: 2%;
+}
+
+.blog-date__day {
+  line-height: 0.6;
+  font-size: 25px;
+  padding-top: 5px;
+}
+
+.horizontal-bar5 {
+  width: 80%;
+}
+
+/**************************************
+* Comments Section Styling
+**************************************/
+.post-structure .comments-wrapper {
+    margin-top: 50px;
+}
+
+.post-structure .comments-wrapper .bars {
+    font-size: 1.3rem;
+    color: #62585f;
+}
+
+.post-structure .comments-wrapper .bars:before,
+.post-structure .comments-wrapper .bars:after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    display: block;
+    background-color: #62585f;
+    margin: 10px 0;
+}
+
+.post-structure .comments-area a {
+    color: #ef4634;
+}
+
+.post-structure .comments-area .comment-list {
+    padding: 0;
+    margin: 0;
+}
+
+.post-structure .comments-area .comment-list .comment,
+.post-structure .comments-area .comment-list .comment-body {
+    overflow: auto;
+}
+
+.post-structure .comments-area .vcard,
+.post-structure .comments-area .commentmetadata {
+    display: inline-block;
+    color: #62585f;
+    font-size: 0.9rem;
+}
+
+.post-structure .comments-area .commentmetadata a {
+    font-size: 0.9rem;
+    color: #62585f;
+}
+
+.post-structure .comments-area .commentmetadata .comment-edit-link {
+    color: #ef4634;
+}
+
+.post-structure .comments-area .comment-body p {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    color: #62585f;
+    margin-top: 10px;
+}
+
+.post-structure .comments-area .comment-body .reply {
+    display: inline-block;
+    float: right;
+}
+
+.post-structure .comments-area .comment-body .reply a {
+    color: #ef4634;
+    font-size: 1rem;
+}
+
+.post-structure .comments-area .comment-body .reply a:before {
+    font-family: 'dashicons';
+    content: "\f344";
+    color: #ef4634;
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+.post-structure .comments-wrapper .bar {
+    height: 1px;
+    width: 100%;
+    background-color: #62585f;
+}
+
+.comments-area #reply-title,
+.comments-area .comment-notes,
+.comments-area .comment-form-comment>label:first-child,
+.comments-area .comment-form-cookies-consent {
+    display: none;
+}
+
+.comments-area .comment-form-comment {
+    margin-bottom: 5px;
+}
+
+.comments-area .comment-form .logged-in-as a {
+    color: #ef4634;
+}
+
+.comments-area .post-comment {
+    font-size: 1.4rem;
+    color: #62585f;
+    margin-bottom: 5px;
+}
+
+.comments-area .comment-form-author,
+.comments-area .comment-form-email,
+.comments-area .comment-form-url {
+    margin: 0;
+    padding: 0;
+    width: 33.33%;
+    float: left;
+}
+
+.comments-area .comment-form-author input,
+.comments-area .comment-form-email input,
+.comments-area .comment-form-url input {
+    width: 95%;
+}
+
+.comments-area .form-submit #submit {
+    float: right;
+    padding: 10px;
+    color: #FFF;
+    background-color: #222222;
+    border-radius: 5px;
+    margin-top: 15px;
 }
