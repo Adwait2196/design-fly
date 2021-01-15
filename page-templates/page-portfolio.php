@@ -37,9 +37,6 @@ $portfolio_query = new WP_Query ( $args );
             $portfolio_query -> the_post();
             echo '<a class="portfolio-links" href="'.esc_attr( get_the_post_thumbnail_url() ).'" rel="lightbox">';
             echo '<img class="portfolio-images" src="'. get_the_post_thumbnail_url() .'"/>';
-            /*echo '<div class="middle">
-                    <div class="text">John Doe</div>
-                  </div>';*/
             echo '<div class="portfolio-image__viewbtn">
                     <img class="portfolio-favicon__image" src="'. get_theme_file_uri( '/assets/images/favicon.ico' ) .'" alt="">
                     <button class="portfolio-viewing__btn" type="button">View Image</button>
