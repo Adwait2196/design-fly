@@ -29,7 +29,6 @@ $portfolio_query = new WP_Query ( $args );
         <button type="button" class="portfolio-header__button">Photography</button>
       </div>
     </div>
-    <hr class="horizontal-bar1"/>
     <div class="portfolio-body">
       <?php
         if( $portfolio_query -> have_posts() ) {
@@ -55,7 +54,6 @@ $portfolio_query = new WP_Query ( $args );
     </div>
     <?php design_fly_pagination_bar ( $portfolio_query ); ?>
   </div>
-  <hr class="horizontal-bar2"/>
 </main>
 <?php
 get_footer();
