@@ -24,7 +24,6 @@ $blogs_query = new WP_Query( $args );
 <div class="blogs-container">
   <main id="primary" class="site-main blogs-maincontent">
     <h2 class="blogs-maincontent__heading"><span class="blogs-heading__text">LET'S BLOG</span></h2>
-    <hr/>
     <div class="blogs-body">
       <?php
         if( $blogs_query -> have_posts() ) {
@@ -48,6 +47,5 @@ $blogs_query = new WP_Query( $args );
     <?php get_sidebar(); ?>
   </div>
 </div>
-<hr class="horizontal-bar5"/>
 <?php
 get_footer();
