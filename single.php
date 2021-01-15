@@ -39,6 +39,5 @@ get_header();
 			<?php get_sidebar(); ?>
 		</div>
 	</div>
-	<hr/>
 <?php
 get_footer();
