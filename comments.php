@@ -21,57 +21,28 @@ if ( post_password_required() ) {
 ?>
 
 <div id="comments" class="comments-area">
-
 	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
-		?>
-		<h2 class="comments-title">
+		if( have_comments() ) {
+			the_comments_navigation();
+			?>
+			<ol class="comments-list">
+				<?php
+					wp_list_comments( array(
+						'type'			=> 'comment',
+						'callback'	=>	'design_fly_custom_comments'
+					) );
+				?>
+			</ol>
+			<hr/>
+			<p class="post-comment"><?php esc_html_e( 'Post your comment', 'design-fly' ); ?></p>
 			<?php
-			$design_fly_comment_count = get_comments_number();
-			if ( '1' === $design_fly_comment_count ) {
-				printf(
-					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'design-fly' ),
-					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
-				);
-			} else {
-				printf( 
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $design_fly_comment_count, 'comments title', 'design-fly' ) ),
-					number_format_i18n( $design_fly_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
-				);
+			the_comments_navigation();
+			if( ! comments_open() ) {
+				?>
+					<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'design-fly' ); ?></p>
+				<?php
 			}
-			?>
-		</h2><!-- .comments-title -->
-
-		<?php the_comments_navigation(); ?>
-
-		<ol class="comment-list">
-			<?php
-			wp_list_comments(
-				array(
-					'style'      => 'ol',
-					'short_ping' => true,
-				)
-			);
-			?>
-		</ol><!-- .comment-list -->
-
-		<?php
-		the_comments_navigation();
-
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() ) :
-			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'design-fly' ); ?></p>
-			<?php
-		endif;
-
-	endif; // Check for have_comments().
-
-	comment_form();
+		}
+		comment_form();
 	?>
-
 </div><!-- #comments -->
