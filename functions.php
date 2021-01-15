@@ -144,6 +144,8 @@ function design_fly_scripts() {
 
 	wp_enqueue_style( 'main-style', get_theme_file_uri( '/css/main.css' ) );
 
+	wp_enqueue_style( 'media-style', get_theme_file_uri( '/css/media-queries.css' ) );
+
 	wp_style_add_data( 'design-fly-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'design-fly-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
@@ -173,6 +175,14 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+*	Portfolio custom widget.
+*/
+require get_template_directory() . '/inc/widgets.php';
+add_action( 'widgets_init', function() {
+  register_widget( 'Designfly_Portfolio_Widget' );
+} );
 
 /**
  * Load Jetpack compatibility file.
