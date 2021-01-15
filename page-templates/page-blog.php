@@ -48,6 +48,6 @@ $blogs_query = new WP_Query( $args );
     <?php get_sidebar(); ?>
   </div>
 </div>
-
+<hr class="horizontal-bar5"/>
 <?php
 get_footer();
