@@ -20,8 +20,21 @@
 					<div class="contactus-container">
 						<h2>Contact Us</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<div class="contactus-icons">
+							<?php
+								$icons_arr = [ 'facebook', 'gp', 'linkedin', 'pin', 'twitter' ];
+								foreach ( $icons_arr as $icon ) {
+									?>
+									<a href="#" class="contactus-icons__links">
+										<img src="<?php esc_attr_e( get_theme_file_uri( '/assets/images/' ) . $icon . '.png' ); ?>" alt="<?php esc_html_e( '$icon' ); ?>">
+									</a>
+									<?php
+								}
+							?>
+						</div>
 					</div>
 			</div>
+			<hr class="horizontal-bar4"/>
 			<div class="site-copyright">
 				<p class="footer-text"><span>&#169;</span> 2020 - D'SIGNfly<span class="sep"> | </span>
 					<?php
