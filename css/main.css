@@ -23,16 +23,21 @@
 }
 
 .main-navigation {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap-reverse;
-  justify-content: space-evenly;
   width: 40%;
-  align-items: center;
+}
+
+.site-navmenu {
+  width: 100%;
+}
+
+.site-navmenu__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  grid-gap: 2%;
 }
 
 .site-navmenu__list > .menu-item {
-  padding: 10px;
 }
 
 .site-navmenu__list > .menu-item a {
@@ -53,6 +58,7 @@
 .site-searchfield {
   display: flex;
   width: 20%;
+  padding-left: 1%;
 }
 
 .site-searchbox {
@@ -140,7 +146,7 @@
 
 .intro-heading {
   margin: 0;
-  margin-top: 20%;
+  margin-top: 275px;
   font-size: 70px;
   font-weight: bold;
   color: #ffffff;
@@ -178,12 +184,15 @@
   font-size: 45px;
   color: #62585f;
   text-shadow: 2px #ffffff;
+  width: 90%;
 }
 
 .portfolio-hometop__btn {
   text-decoration: none;
   margin-top: auto;
   margin-bottom: auto;
+  width: 10%;
+  text-align: right;
 }
 
 .portfolio-hometop__btntxt {
@@ -782,4 +791,11 @@
   width: 100%;
   height: 100%;
   border-radius: 5px;
+}
+
+.widget-title__heading {
+  font-family: 'Open sans', sans-serif;
+  font-size: 30px;
+  color: #62585f;
+  font-weight: normal;
 }
