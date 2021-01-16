@@ -24,10 +24,11 @@
   }
   .intro-heading {
     font-size: 55px;
+    margin-top: 200px;
   }
   .intro-info {
-    font-size: 20px;
-    width: 60%;
+    font-size: 18px;
+    width: 50%;
   }
 
   /* Features section styling */
@@ -44,6 +45,10 @@
     width: 80%;
   }
 
+  .portfolio-hometop__title {
+    font-size: 35px;
+  }
+
   /* Footer styling */
   .site-info {
     width: 80%;
@@ -55,21 +60,50 @@
     width: 80%;
   }
 
+  .portfolio-heading__text {
+    font-size: 35px;
+  }
+
   /* Blogs page styling */
   .blogs-container {
     grid-template-columns: 65% 30%;
     padding-left: 2%;
     padding-right: 2%;
   }
+
+  .blogs-heading__text {
+    font-size: 35px;
+  }
+
+  .blog-head__heading {
+    font-size: 25px;
+  }
+
   .portfolio-widget__links {
     width: 60px;
     height: 60px;
   }
+
   .portfolio-widgcontainer {
     grid-row-gap: 10px;
   }
+
   .blog-content {
     font-size: 16px;
+  }
+
+  .post-structure {
+    padding-right: 0;
+  }
+
+  .post-maincontent {
+    width: 65%;
+    padding: 3%;
+  }
+
+  .post-sidebar {
+    width: 35%;
+    padding: 3%;
   }
 }
 
@@ -77,5 +111,124 @@
 * Media queries for tab view.
 **************************************/
 @media only screen and ( min-width : 768px ) and ( max-width : 949px ) {
-  
+  /* Navbar styling */
+  .site-branding {
+    width: 25%;
+  }
+  .main-navigation {
+    width: 45%;
+  }
+  .site-searchfield {
+    width: 5%;
+  }
+
+  .site-logo__image {
+    width: 70%;
+    margin-right: 5%;
+  }
+
+  .site-searchfield {
+    padding-left: 5%;
+  }
+
+  /* Home banner styling */
+  .intro-container {
+    max-height: 300px;
+    min-height: 300px;
+  }
+  .intro-heading {
+    font-size: 35px;
+    margin-top: 160px;
+  }
+  .intro-info {
+    font-size: 16px;
+    width: 60%;
+  }
+
+  /* Features section styling */
+  .features-container {
+    padding-left: 3%;
+    padding-right: 2%;
+  }
+  .feature-info__para {
+    font-size: 14px;
+  }
+
+  /* Portfolio home styling */
+  .portfolio-hometop__title {
+    width: 80%;
+    font-size: 30px;
+  }
+
+  .portfolio-hometop__btn {
+    width: 20%;
+  }
+
+  .portfolio-images__container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Portfolio main-page styling */
+  .portfolio-container {
+    width: 90%;
+  }
+
+  .portfolio-header {
+    flex-direction: column;
+  }
+
+  .portfolio-header__heading {
+    margin-right: auto;
+  }
+
+  .portfolio-header__buttons {
+    margin-left: auto;
+  }
+
+  .portfolio-body {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Footer styling */
+  .site-info {
+    width: 95%;
+    font-size: 16px;
+  }
+
+  /* Blogs page styling */
+  .blogs-container {
+    grid-template-columns: 65% 30%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .blog-head__heading {
+    font-size: 25px;
+    padding-left: 2%;
+  }
+
+  .portfolio-widgcontainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .portfolio-widget__links {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Single Post Styling */
+  .post-structure {
+    padding-right: 0;
+  }
+
+  .post-maincontent {
+    width: 65%;
+    padding: 3%;
+  }
+
+  .post-sidebar {
+    width: 35%;
+    padding: 3%;
+  }
+
 }
