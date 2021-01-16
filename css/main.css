@@ -529,6 +529,10 @@
   padding-bottom: 3%;
 }
 
+.blog-content__cmnt {
+  color: #ef4634;
+}
+
 .blogs-maincontent__heading {
   margin: 0;
   border-bottom: 1px solid #222222;
@@ -641,6 +645,14 @@
 
 .horizontal-bar5 {
   width: 80%;
+}
+
+.read-more {
+  text-decoration: none;
+}
+
+.read-more__txt {
+  color: #ef4634;
 }
 
 /**************************************
@@ -798,4 +810,36 @@
   font-size: 30px;
   color: #62585f;
   font-weight: normal;
+}
+
+/**************************************
+* Sidebar Styling
+**************************************/
+#secondary .widget-title {
+  font-family: 'Open sans', sans-serif;
+  font-size: 30px;
+  color: #62585f;
+  font-weight: normal;
+}
+
+#secondary ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+#secondary ul li a {
+  color: #ef4634;
+  text-decoration: none;
+}
+
+#secondary .tagcloud {
+  display: flex;
+  flex-direction: column;
+}
+
+#secondary .tagcloud .tag-cloud-link {
+  text-decoration: none;
+  color: #ef4634;
+  font-size: 20px !important;
 }
