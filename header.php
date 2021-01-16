@@ -42,7 +42,7 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" data-toggle="collapse" data-target="#site-navmenu__list" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'design-fly' ); ?></button>
+			<button class="menu-toggle" data-toggle="collapse" data-target="#site-navmenu__list" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'design-fly' ); ?></button>
 			<?php
 			wp_nav_menu(
 				array(
