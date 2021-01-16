@@ -42,7 +42,13 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" data-toggle="collapse" data-target="#site-navmenu__list" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'design-fly' ); ?></button>
+			<button class="menu-toggle" data-toggle="collapse" data-target="#site-navmenu__list" aria-controls="primary-menu" aria-expanded="false">
+				<svg viewBox="0 0 100 80" width="30" height="30">
+	  			<rect width="100" height="20"></rect>
+	  			<rect y="30" width="100" height="20"></rect>
+	  			<rect y="60" width="100" height="20"></rect>
+				</svg>
+			</button>
 			<?php
 			wp_nav_menu(
 				array(
@@ -56,7 +62,7 @@
 			?>
 		</nav><!-- #site-navigation -->
 		<form class="site-searchfield" action="<?php echo home_url( '/' ); ?>" method="get">
-			<input type="text" class="site-searchbox" value="<?php the_search_query(); ?>" id="search" />
+			<input type="text" class="site-searchbox" value="<?php the_search_query(); ?>" id="search" name="s" />
 			<input type="image" class="site-searchbox__image" id="site-searchbtn" alt="Search" src=" <?php esc_url( bloginfo( 'template_url' ) ); ?>/assets/images/search-icon-normal.png ">
 		</form>
 	</header><!-- #masthead -->
