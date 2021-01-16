@@ -142,6 +142,8 @@ add_action( 'widgets_init', 'design_fly_widgets_init' );
 function design_fly_scripts() {
 	wp_enqueue_style( 'design-fly-style', get_stylesheet_uri(), array(), _S_VERSION );
 
+	wp_enqueue_style( 'dashicons' );
+
 	wp_enqueue_style( 'main-style', get_theme_file_uri( '/css/main.css' ) );
 
 	wp_enqueue_style( 'media-style', get_theme_file_uri( '/css/media-queries.css' ) );
