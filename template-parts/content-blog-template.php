@@ -32,11 +32,15 @@
                     </span>
                   </a> on <?php echo get_the_date( 'd M Y' ); ?>
                 </p>
-                <p class="blog-content__comments"><?php echo get_comments_number(); ?>Comments(s)</p>
+                <p class="blog-content__comments"><span class="blog-content__cmnt"><?php echo get_comments_number(); ?>Comments(s)</span></p>
             </div>
             <hr class="horizontal-bar1"/>
             <div class="blog-content__info">
-              <?php the_excerpt(); ?>
+              <?php
+                $excerpt_value = substr( get_the_excerpt(), 0, 225 ) . '...';
+                esc_html_e( $excerpt_value );
+                echo '<br/><a class="read-more" href="'. get_permalink( get_the_id() ) .'"><span class="read-more__txt">Read More</span></a>';
+              ?>
             </div>
           </div>
           <?php
@@ -51,11 +55,15 @@
                     </span>
                   </a> on <?php echo get_the_date( 'd M Y' ); ?>
                 </p>
-                <p class="blog-content__comments"><?php echo get_comments_number(); ?>Comments(s)</p>
+                <p class="blog-content__comments"><span class="blog-content__cmnt"><?php echo get_comments_number(); ?>Comments(s)</span></p>
             </div>
             <hr class="horizontal-bar1"/>
             <div class="blog-content__info">
-              <?php the_excerpt(); ?>
+              <?php
+                $excerpt_value = substr( get_the_excerpt(), 0, 275 ) . '...';
+                esc_html_e( $excerpt_value );
+                echo '<br/><a class="read-more" href="'. get_permalink( get_the_id() ) .'"><span class="read-more__txt">Read More</span></a>';
+              ?>
             </div>
           </div>
           <?php
