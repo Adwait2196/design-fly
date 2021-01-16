@@ -211,6 +211,14 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  .portfolio-widget__links:nth-child(7) {
+    display: none;
+  }
+
+  .portfolio-widget__links:nth-child(8) {
+    display: none;
+  }
+
   .portfolio-widget__links {
     width: 60px;
     height: 60px;
@@ -230,5 +238,401 @@
     width: 35%;
     padding: 3%;
   }
+}
 
+/**************************************
+* Media queries for L-phones.
+**************************************/
+@media only screen and ( min-width : 425px ) and ( max-width : 767px ) {
+  .site-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    position: relative;
+  }
+
+  .site-searchfield {
+    display: none;
+  }
+
+  .site-branding {
+    width: 100%;
+  }
+
+  .main-navigation {
+    width: 100%;
+  }
+
+  .menu-toggle {
+    margin-left: auto;
+    margin-right: 10px;
+    background-color: whitesmoke;
+    color: #ffffff;
+    transition: 0.3s ease-in-out;
+    border: none;
+  }
+
+  .site-navmenu__list {
+    position: absolute;
+    background-color: whitesmoke;
+    left: 0;
+    top: 105px;
+    width: 100%;
+  }
+
+  .menu-toggle:hover {
+    background-color: #ef4634;
+  }
+
+  /* Home banner styling */
+  .intro-container {
+    max-height: 300px;
+    min-height: 300px;
+  }
+
+  .intro-heading {
+    margin-top: 150px;
+    font-size: 35px;
+  }
+
+  .intro-info {
+    width: 90%;
+  }
+
+  /* Features section styling */
+  .features-container {
+    grid-template-columns: 1fr;
+    height: auto;
+    background-repeat: repeat;
+  }
+
+  /* Portfolio home styling */
+  .portfolio-home {
+    width: 90%;
+  }
+
+  .portfolio-hometop {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 5%;
+  }
+
+  .portfolio-hometop__title {
+    width: 100%;
+    font-size: 30px;
+  }
+
+  .portfolio-hometop__btn {
+    width: 100%;
+  }
+
+  .portfolio-hometop__btntxt {
+    font-size: 14px;
+  }
+
+  .portfolio-images__container {
+    grid-template-columns: 1fr;
+    border-bottom: none;
+  }
+
+  .portfolio-images__container a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Footer styling */
+  .site-info {
+    width: 95%;
+    font-size: 16px;
+  }
+
+  /* Portfolio main-page styling */
+  .portfolio-container {
+    width: 95%;
+  }
+
+  .portfolio-header {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .portfolio-header__heading {
+    margin-right: auto;
+  }
+
+  .portfolio-heading__text {
+    font-size: 30px;
+  }
+
+  .portfolio-header__buttons {
+    margin-left: auto;
+  }
+
+  .portfolio-header__button {
+    font-size: 14px;
+  }
+
+  .portfolio-body {
+    grid-template-columns: 1fr;
+  }
+
+  /* Blogs page styling */
+  .blogs-sidebar {
+    display: none;
+  }
+
+  .blogs-container {
+    grid-template-columns: 1fr;
+    width: 95%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .blog-head__heading {
+    font-size: 25px;
+  }
+
+  .blog-head {
+    height: auto;
+  }
+
+  .blog-body {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .blog-thumbnail {
+    width: 100%;
+  }
+
+  .blog-thumbnail>.wp-post-image {
+    width: 100%;
+    height: 250px;
+  }
+
+  .blog-content {
+    width: 100%;
+  }
+
+  .blogs-body div{
+    height: auto;
+    margin-bottom: 1%;
+  }
+
+  /* Single Post Styling */
+  .post-structure {
+    width: 100%;
+  }
+
+  .post-maincontent {
+    width: 95%;
+  }
+
+  .post-sidebar {
+    display: none;
+  }
+
+  .entry-meta {
+    font-size: 16px;
+  }
+}
+
+/**************************************
+* Media queries for S-phones.
+**************************************/
+
+@media only screen and ( min-width : 200px ) and ( max-width : 424px ) {
+  .site-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    position: relative;
+  }
+
+  .site-navmenu__list {
+    position: absolute;
+    background-color: whitesmoke;
+    left: 0;
+    top: 105px;
+    width: 100%;
+  }
+
+  .site-searchfield {
+    display: none;
+  }
+
+  .site-branding {
+    width: 100%;
+  }
+
+  .main-navigation {
+    width: 100%;
+  }
+
+  .menu-toggle {
+    margin-left: auto;
+    margin-right: 10px;
+    background-color: whitesmoke;
+    color: #ffffff;
+    transition: 0.3s ease-in-out;
+    border: none;
+  }
+
+  .menu-toggle:hover {
+    background-color: #ef4634;
+  }
+
+  /* Home banner styling */
+  .intro-container {
+    max-height: 300px;
+    min-height: 300px;
+  }
+
+  .intro-heading {
+    margin-top: 150px;
+    font-size: 35px;
+  }
+
+  .intro-info {
+    width: 90%;
+  }
+
+  /* Features section styling */
+  .features-container {
+    grid-template-columns: 1fr;
+    height: auto;
+    background-repeat: repeat;
+  }
+
+  /* Portfolio home styling */
+  .portfolio-home {
+    width: 90%;
+  }
+
+  .portfolio-hometop {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 5%;
+  }
+
+  .portfolio-hometop__title {
+    width: 100%;
+    font-size: 30px;
+  }
+
+  .portfolio-hometop__btn {
+    width: 100%;
+  }
+
+  .portfolio-hometop__btntxt {
+    font-size: 14px;
+  }
+
+  .portfolio-images__container {
+    grid-template-columns: 1fr;
+    border-bottom: none;
+  }
+
+  .portfolio-images__container a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Footer styling */
+  .site-info {
+    width: 95%;
+    font-size: 16px;
+  }
+
+  /* Portfolio main-page styling */
+  .portfolio-container {
+    width: 95%;
+  }
+
+  .portfolio-header {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .portfolio-header__heading {
+    margin-right: auto;
+  }
+
+  .portfolio-heading__text {
+    font-size: 30px;
+  }
+
+  .portfolio-header__buttons {
+    margin-left: auto;
+  }
+
+  .portfolio-header__button {
+    font-size: 14px;
+  }
+
+  .portfolio-body {
+    grid-template-columns: 1fr;
+  }
+
+  /* Blogs page styling */
+  .blogs-sidebar {
+    display: none;
+  }
+
+  .blogs-container {
+    grid-template-columns: 1fr;
+    width: 95%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .blog-head__heading {
+    font-size: 25px;
+  }
+
+  .blog-head {
+    height: auto;
+  }
+
+  .blog-body {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .blog-thumbnail {
+    width: 100%;
+  }
+
+  .blog-thumbnail>.wp-post-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .blogs-body div{
+    height: auto;
+    margin-bottom: 1%;
+  }
+
+  /* Single Post Styling */
+  .post-structure {
+    width: 100%;
+  }
+
+  .post-maincontent {
+    width: 95%;
+  }
+
+  .post-sidebar {
+    display: none;
+  }
+
+  .entry-meta {
+    font-size: 16px;
+  }
 }
