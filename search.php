@@ -9,7 +9,7 @@
 
 get_header();
 ?>
-
+<div class="blogs-container">
 	<main id="primary" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
@@ -33,7 +33,7 @@ get_header();
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', 'search' );
+				get_template_part( 'template-parts/content', 'blog-template' );
 
 			endwhile;
 
@@ -47,7 +47,9 @@ get_header();
 		?>
 
 	</main><!-- #main -->
-
+	<div class="blogs-sidebar">
+    <?php get_sidebar(); ?>
+  </div>
+</div>
 <?php
-get_sidebar();
 get_footer();
