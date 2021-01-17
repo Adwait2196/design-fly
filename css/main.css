@@ -23,16 +23,21 @@
 }
 
 .main-navigation {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap-reverse;
-  justify-content: space-evenly;
   width: 40%;
-  align-items: center;
+}
+
+.site-navmenu {
+  width: 100%;
+}
+
+.site-navmenu__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  grid-gap: 2%;
 }
 
 .site-navmenu__list > .menu-item {
-  padding: 10px;
 }
 
 .site-navmenu__list > .menu-item a {
@@ -53,6 +58,7 @@
 .site-searchfield {
   display: flex;
   width: 20%;
+  padding-left: 1%;
 }
 
 .site-searchbox {
@@ -140,7 +146,7 @@
 
 .intro-heading {
   margin: 0;
-  margin-top: 20%;
+  margin-top: 275px;
   font-size: 70px;
   font-weight: bold;
   color: #ffffff;
@@ -178,12 +184,15 @@
   font-size: 45px;
   color: #62585f;
   text-shadow: 2px #ffffff;
+  width: 90%;
 }
 
 .portfolio-hometop__btn {
   text-decoration: none;
   margin-top: auto;
   margin-bottom: auto;
+  width: 10%;
+  text-align: right;
 }
 
 .portfolio-hometop__btntxt {
@@ -378,12 +387,16 @@
 .portfolio-header__button {
   font-family: 'Open sans', sans-serif;
   font-size: 16px;
-  color: #ffffff;
   padding: 10px;
   background-color: #222222;
   text-align: center;
   border-radius: 5px;
   transition: 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.portfolio-header__buttontxt {
+  color: #ffffff;
 }
 
   .portfolio-header__button:hover {
@@ -417,6 +430,10 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 2%;
+}
+
+.pagination-on__smallscreens {
+  display: none;
 }
 
 .pagination .page-numbers {
@@ -488,20 +505,46 @@
     opacity: 1;
   }
 
-  .portfolio-viewing__btn {
-    background-color: rgba(0, 0, 0, 0);
-    color: black;
-    font-weight: bold;
-    font-size: 16px;
-    border: none;
-  }
+.portfolio-viewing__btn {
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+}
 
-  .portfolio-favicon__image {
-    width: 20px;
-    height: 20px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.portfolio-favicon__image {
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#TB_window {
+  padding-bottom: 20px;
+}
+
+#TB_next>a{
+  text-decoration: none;
+  color: #ef4634;
+}
+
+#TB_prev>a{
+  text-decoration: none;
+  color: #ef4634;
+}
+
+#TB_closeWindow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX( 20px );
+  background-color: white;
+}
+
+#TB_closeWindowButton {
+  top: 0;
+}
 
 /**************************************
 * Blogs Page Styling
@@ -518,6 +561,10 @@
 .blogs-body {
   padding-top: 3%;
   padding-bottom: 3%;
+}
+
+.blog-content__cmnt {
+  color: #ef4634;
 }
 
 .blogs-maincontent__heading {
@@ -598,6 +645,11 @@
   margin: 0;
 }
 
+.blog-content__author .vcard>a {
+  text-decoration: none;
+  color: #ef4634;
+}
+
 .blog-content__comments {
   margin: 0;
 }
@@ -632,6 +684,14 @@
 
 .horizontal-bar5 {
   width: 80%;
+}
+
+.read-more {
+  text-decoration: none;
+}
+
+.read-more__txt {
+  color: #ef4634;
 }
 
 /**************************************
@@ -782,4 +842,43 @@
   width: 100%;
   height: 100%;
   border-radius: 5px;
+}
+
+.widget-title__heading {
+  font-family: 'Open sans', sans-serif;
+  font-size: 30px;
+  color: #62585f;
+  font-weight: normal;
+}
+
+/**************************************
+* Sidebar Styling
+**************************************/
+#secondary .widget-title {
+  font-family: 'Open sans', sans-serif;
+  font-size: 30px;
+  color: #62585f;
+  font-weight: normal;
+}
+
+#secondary ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+#secondary ul li a {
+  color: #ef4634;
+  text-decoration: none;
+}
+
+#secondary .tagcloud {
+  display: flex;
+  flex-direction: column;
+}
+
+#secondary .tagcloud .tag-cloud-link {
+  text-decoration: none;
+  color: #ef4634;
+  font-size: 20px !important;
 }

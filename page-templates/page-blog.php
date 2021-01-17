@@ -41,11 +41,12 @@ $blogs_query = new WP_Query( $args );
         }
       ?>
     </div>
-    <?php design_fly_pagination_bar ( $blogs_query ); ?>
+    <span class="pagination-on__smallscreens"><?php design_fly_pagination_bar ( $blogs_query ); ?></span>
   </main>
   <div class="blogs-sidebar">
     <?php get_sidebar(); ?>
   </div>
 </div>
+<span class="pagination-on__bigscreens"><?php design_fly_pagination_bar ( $blogs_query ); ?></span>
 <?php
 get_footer();

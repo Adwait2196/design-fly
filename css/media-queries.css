@@ -24,10 +24,11 @@
   }
   .intro-heading {
     font-size: 55px;
+    margin-top: 200px;
   }
   .intro-info {
-    font-size: 20px;
-    width: 60%;
+    font-size: 18px;
+    width: 50%;
   }
 
   /* Features section styling */
@@ -44,6 +45,10 @@
     width: 80%;
   }
 
+  .portfolio-hometop__title {
+    font-size: 35px;
+  }
+
   /* Footer styling */
   .site-info {
     width: 80%;
@@ -55,21 +60,56 @@
     width: 80%;
   }
 
+  .portfolio-heading__text {
+    font-size: 35px;
+  }
+
   /* Blogs page styling */
   .blogs-container {
     grid-template-columns: 65% 30%;
     padding-left: 2%;
     padding-right: 2%;
   }
+
+  .blogs-heading__text {
+    font-size: 35px;
+  }
+
+  .blog-head__heading {
+    font-size: 25px;
+  }
+
   .portfolio-widget__links {
     width: 60px;
     height: 60px;
   }
+
   .portfolio-widgcontainer {
     grid-row-gap: 10px;
   }
+
   .blog-content {
     font-size: 16px;
+  }
+
+  /* Post page styling */
+  .post-structure {
+    padding-right: 0;
+  }
+
+  .post-maincontent {
+    width: 65%;
+    padding: 3%;
+  }
+
+  .post-sidebar {
+    width: 35%;
+    padding: 3%;
+  }
+
+  /* Pagination styling */
+  .pagination-on__smallscreens {
+    display: none;
   }
 }
 
@@ -77,5 +117,551 @@
 * Media queries for tab view.
 **************************************/
 @media only screen and ( min-width : 768px ) and ( max-width : 949px ) {
-  
+  /* Navbar styling */
+  .site-branding {
+    width: 25%;
+  }
+  .main-navigation {
+    width: 45%;
+  }
+  .site-searchfield {
+    width: 5%;
+  }
+
+  .site-logo__image {
+    width: 70%;
+    margin-right: 5%;
+  }
+
+  .site-searchfield {
+    padding-left: 5%;
+  }
+
+  /* Home banner styling */
+  .intro-container {
+    max-height: 300px;
+    min-height: 300px;
+  }
+  .intro-heading {
+    font-size: 35px;
+    margin-top: 160px;
+  }
+  .intro-info {
+    font-size: 16px;
+    width: 60%;
+  }
+
+  /* Features section styling */
+  .features-container {
+    padding-left: 3%;
+    padding-right: 2%;
+  }
+  .feature-info__para {
+    font-size: 14px;
+  }
+
+  /* Portfolio home styling */
+  .portfolio-hometop__title {
+    width: 80%;
+    font-size: 30px;
+  }
+
+  .portfolio-hometop__btn {
+    width: 20%;
+  }
+
+  .portfolio-images__container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Portfolio main-page styling */
+  .portfolio-container {
+    width: 90%;
+  }
+
+  .portfolio-header {
+    flex-direction: column;
+  }
+
+  .portfolio-header__heading {
+    margin-right: auto;
+  }
+
+  .portfolio-header__buttons {
+    margin-left: auto;
+  }
+
+  .portfolio-body {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Footer styling */
+  .site-info {
+    width: 95%;
+    font-size: 16px;
+  }
+
+  /* Blogs page styling */
+  .blogs-container {
+    grid-template-columns: 65% 30%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .blog-head__heading {
+    font-size: 25px;
+    padding-left: 2%;
+  }
+
+  .portfolio-widgcontainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .portfolio-widget__links:nth-child(7) {
+    display: none;
+  }
+
+  .portfolio-widget__links:nth-child(8) {
+    display: none;
+  }
+
+  .portfolio-widget__links {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Single Post Styling */
+  .post-structure {
+    padding-right: 0;
+  }
+
+  .post-maincontent {
+    width: 65%;
+    padding: 3%;
+  }
+
+  .post-sidebar {
+    width: 35%;
+    padding: 3%;
+  }
+}
+
+/**************************************
+* Media queries for L-phones.
+**************************************/
+@media only screen and ( min-width : 425px ) and ( max-width : 767px ) {
+  .site-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    position: relative;
+  }
+
+  .site-searchfield {
+    display: none;
+  }
+
+  .site-branding {
+    width: 100%;
+  }
+
+  .main-navigation {
+    width: 100%;
+  }
+
+  .menu-toggle {
+    margin-left: auto;
+    margin-right: 10px;
+    background-color: whitesmoke;
+    color: #ffffff;
+    transition: 0.3s ease-in-out;
+    border: none;
+  }
+
+  .site-navmenu__list {
+    position: absolute;
+    background-color: whitesmoke;
+    left: 0;
+    top: 105px;
+    width: 100%;
+  }
+
+  .menu-toggle:hover {
+    background-color: #ef4634;
+  }
+
+  /* Home banner styling */
+  .intro-container {
+    max-height: 300px;
+    min-height: 300px;
+  }
+
+  .intro-heading {
+    margin-top: 150px;
+    font-size: 35px;
+  }
+
+  .intro-info {
+    width: 90%;
+  }
+
+  /* Features section styling */
+  .features-container {
+    grid-template-columns: 1fr;
+    height: auto;
+    background-repeat: repeat;
+  }
+
+  /* Portfolio home styling */
+  .portfolio-home {
+    width: 90%;
+  }
+
+  .portfolio-hometop {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 5%;
+  }
+
+  .portfolio-hometop__title {
+    width: 100%;
+    font-size: 30px;
+  }
+
+  .portfolio-hometop__btn {
+    width: 100%;
+  }
+
+  .portfolio-hometop__btntxt {
+    font-size: 14px;
+  }
+
+  .portfolio-images__container {
+    grid-template-columns: 1fr;
+    border-bottom: none;
+  }
+
+  .portfolio-images__container a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Footer styling */
+  .site-info {
+    width: 95%;
+    font-size: 16px;
+  }
+
+  /* Portfolio main-page styling */
+  .portfolio-container {
+    width: 95%;
+  }
+
+  .portfolio-header {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .portfolio-header__heading {
+    margin-right: auto;
+  }
+
+  .portfolio-heading__text {
+    font-size: 30px;
+  }
+
+  .portfolio-header__buttons {
+    margin-left: auto;
+  }
+
+  .portfolio-header__button {
+    font-size: 14px;
+  }
+
+  .portfolio-body {
+    grid-template-columns: 1fr;
+  }
+
+  /* Blogs page styling */
+  .blogs-sidebar {
+    order: 3;
+  }
+
+  .pagination {
+    order: 2;
+  }
+
+  .blogs-container {
+    grid-template-columns: 1fr;
+    width: 95%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .blog-head__heading {
+    font-size: 25px;
+  }
+
+  .blog-head {
+    height: auto;
+  }
+
+  .blog-body {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .blog-thumbnail {
+    width: 100%;
+  }
+
+  .blog-thumbnail>.wp-post-image {
+    width: 100%;
+    height: 250px;
+  }
+
+  .blog-content {
+    width: 100%;
+  }
+
+  .blogs-body div{
+    height: auto;
+    margin-bottom: 1%;
+  }
+
+  /* Single Post Styling */
+  .post-structure {
+    width: 100%;
+  }
+
+  .post-maincontent {
+    width: 95%;
+  }
+
+  .post-sidebar {
+    display: none;
+  }
+
+  .entry-meta {
+    font-size: 16px;
+  }
+
+  /* Pagination styling */
+  .pagination-on__bigscreens {
+    display: none;
+  }
+
+  .pagination-on__smallscreens {
+    display: block;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #222222;
+  }
+}
+
+/**************************************
+* Media queries for S-phones.
+**************************************/
+
+@media only screen and ( min-width : 200px ) and ( max-width : 424px ) {
+  .site-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    position: relative;
+  }
+
+  .site-navmenu__list {
+    position: absolute;
+    background-color: whitesmoke;
+    left: 0;
+    top: 105px;
+    width: 100%;
+  }
+
+  .site-searchfield {
+    display: none;
+  }
+
+  .site-branding {
+    width: 100%;
+  }
+
+  .main-navigation {
+    width: 100%;
+  }
+
+  .menu-toggle {
+    margin-left: auto;
+    margin-right: 10px;
+    background-color: whitesmoke;
+    color: #ffffff;
+    transition: 0.3s ease-in-out;
+    border: none;
+  }
+
+  .menu-toggle:hover {
+    background-color: #ef4634;
+  }
+
+  /* Home banner styling */
+  .intro-container {
+    max-height: 300px;
+    min-height: 300px;
+  }
+
+  .intro-heading {
+    margin-top: 150px;
+    font-size: 35px;
+  }
+
+  .intro-info {
+    width: 90%;
+  }
+
+  /* Features section styling */
+  .features-container {
+    grid-template-columns: 1fr;
+    height: auto;
+    background-repeat: repeat;
+  }
+
+  /* Portfolio home styling */
+  .portfolio-home {
+    width: 90%;
+  }
+
+  .portfolio-hometop {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 5%;
+  }
+
+  .portfolio-hometop__title {
+    width: 100%;
+    font-size: 30px;
+  }
+
+  .portfolio-hometop__btn {
+    width: 100%;
+  }
+
+  .portfolio-hometop__btntxt {
+    font-size: 14px;
+  }
+
+  .portfolio-images__container {
+    grid-template-columns: 1fr;
+    border-bottom: none;
+  }
+
+  .portfolio-images__container a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Footer styling */
+  .site-info {
+    width: 95%;
+    font-size: 16px;
+  }
+
+  /* Portfolio main-page styling */
+  .portfolio-container {
+    width: 95%;
+  }
+
+  .portfolio-header {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .portfolio-header__heading {
+    margin-right: auto;
+  }
+
+  .portfolio-heading__text {
+    font-size: 30px;
+  }
+
+  .portfolio-header__buttons {
+    margin-left: auto;
+  }
+
+  .portfolio-header__button {
+    font-size: 14px;
+  }
+
+  .portfolio-body {
+    grid-template-columns: 1fr;
+  }
+
+  /* Blogs page styling */
+
+  .blogs-container {
+    grid-template-columns: 1fr;
+    width: 95%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .blog-head__heading {
+    font-size: 25px;
+  }
+
+  .blog-head {
+    height: auto;
+  }
+
+  .blog-body {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .blog-thumbnail {
+    width: 100%;
+  }
+
+  .blog-thumbnail>.wp-post-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .blogs-body div{
+    height: auto;
+    margin-bottom: 1%;
+  }
+
+  /* Single Post Styling */
+  .post-structure {
+    width: 100%;
+  }
+
+  .post-maincontent {
+    width: 95%;
+  }
+
+  .post-sidebar {
+    display: none;
+  }
+
+  .entry-meta {
+    font-size: 16px;
+  }
+
+  /* Pagination Styling */
+  .pagination-on__bigscreens {
+    display: none;
+  }
+
+  .pagination-on__smallscreens {
+    display: block;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #222222;
+  }
 }

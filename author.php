@@ -1,18 +1,29 @@
 <?php
 /**
- * The template for displaying archive pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package DesignFly
- */
+* This template is used for author archive.
+*
+* @package DesignFly
+*/
 
 get_header();
+
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+$posts_per_page = get_option( 'posts_per_page' );
+$current_usr_id = get_current_user_id();
+$args = array(
+  'post_type'       => array( 'post', 'df-portfolio' ),
+  'posts_per_page'  => 7,
+  'paged'           => $paged,
+  'post_status'     => 'publish',
+  'author'          => $current_usr_id
+);
+
+$authors_query = new WP_Query( $args );
 ?>
 <div class="blogs-container">
 	<main id="primary" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+		<?php if ( $authors_query -> have_posts() ) : ?>
 
 			<header class="page-header">
 				<?php
@@ -23,8 +34,8 @@ get_header();
 
 			<?php
 			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+			while ( $authors_query -> have_posts() ) :
+				$authors_query -> the_post();
 
 				/*
 				 * Include the Post-Type-specific template for the content.
@@ -49,5 +60,6 @@ get_header();
     <?php get_sidebar(); ?>
   </div>
 </div>
+<?php design_fly_pagination_bar ( $authors_query ); ?>
 <?php
 get_footer();

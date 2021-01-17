@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages
+ * The template for displaying category pages.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -8,11 +8,26 @@
  */
 
 get_header();
+
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1 ;
+$category_id = get_query_var( 'cat' );
+$args = array(
+	'post_type'				=> array( 'post', 'df-portfolio' ),
+	'posts_per_page'	=> 5,
+	'paged'						=> $paged,
+	'tax_query'				=> array(
+		array(
+			'taxonomy'		=> 'category',
+			'terms'				=> $category_id
+		),
+	),
+);
+$categories_query = new WP_Query( $args );
 ?>
 <div class="blogs-container">
 	<main id="primary" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+		<?php if ( $categories_query -> have_posts() ) : ?>
 
 			<header class="page-header">
 				<?php
@@ -23,8 +38,8 @@ get_header();
 
 			<?php
 			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+			while ( $categories_query -> have_posts() ) :
+				$categories_query -> the_post();
 
 				/*
 				 * Include the Post-Type-specific template for the content.
@@ -49,5 +64,6 @@ get_header();
     <?php get_sidebar(); ?>
   </div>
 </div>
+<?php design_fly_pagination_bar ( $categories_query ); ?>
 <?php
 get_footer();

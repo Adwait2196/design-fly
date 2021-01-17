@@ -41,7 +41,7 @@ class Designfly_Portfolio_Widget extends WP_Widget {
 
     if( $query -> have_posts() ) {
       ?>
-      <h2 class="widget-title">
+      <h2 class="widget-title"><span class="widget-title__heading">
         <?php
           if( isset( $instance[ 'title' ] ) ) {
             $title = $instance[ 'title' ];
@@ -51,7 +51,7 @@ class Designfly_Portfolio_Widget extends WP_Widget {
           }
           echo $title;
         ?>
-      </h2>
+      </span></h2>
       <div class="portfolio-widgcontainer">
         <?php
         while( $query -> have_posts() ) {
