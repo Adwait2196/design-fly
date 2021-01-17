@@ -24,9 +24,14 @@ $portfolio_query = new WP_Query ( $args );
     <div class="portfolio-header">
       <h2 class="portfolio-header__heading"><span class="portfolio-heading__text">DESIGN IS THE SOUL</span></h2>
       <div class="portfolio-header__buttons">
-        <button type="button" class="portfolio-header__button">Advertising</button>
-        <button type="button" class="portfolio-header__button">Multimedia</button>
-        <button type="button" class="portfolio-header__button">Photography</button>
+        <?php
+          $terms = get_terms( [ 'taxonomy' => 'post_tag', 'hide_empty' => true ]);
+          foreach( $terms as $term ) {
+            ?>
+            <a href="<?php echo esc_url( get_term_link( $term ) ); ?>" class="portfolio-header__button" role="button"><span class="portfolio-header__buttontxt"><?php esc_html_e( $term->name ); ?></span></a>
+            <?php
+          }
+        ?>
       </div>
     </div>
     <div class="portfolio-body">
@@ -34,7 +39,7 @@ $portfolio_query = new WP_Query ( $args );
         if( $portfolio_query -> have_posts() ) {
           while( $portfolio_query -> have_posts() ) {
             $portfolio_query -> the_post();
-            echo '<a class="portfolio-links" href="'.esc_attr( get_the_post_thumbnail_url() ).'" rel="lightbox">';
+            echo '<a class="portfolio-links thickbox" href="'.esc_attr( get_the_post_thumbnail_url() ).'?TB_iframe=true&width=350&height=450" rel="lightbox">';
             echo '<img class="portfolio-images" src="'. get_the_post_thumbnail_url() .'"/>';
             echo '<div class="portfolio-image__viewbtn">
                     <img class="portfolio-favicon__image" src="'. get_theme_file_uri( '/assets/images/favicon.ico' ) .'" alt="">
