@@ -10,7 +10,7 @@
 get_header();
 
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1 ;
-$tag_id = $_GET[ 'tag' ];
+$tag_id = get_query_var( 'tag' );
 $args = array(
 	'post_type'				=> array( 'post', 'df-portfolio' ),
 	'posts_per_page'	=> 5,
