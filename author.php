@@ -12,7 +12,7 @@ $posts_per_page = get_option( 'posts_per_page' );
 $current_usr_id = get_current_user_id();
 $args = array(
   'post_type'       => array( 'post', 'df-portfolio' ),
-  'posts_per_page'  => 3,
+  'posts_per_page'  => 7,
   'paged'           => $paged,
   'post_status'     => 'publish',
   'author'          => $current_usr_id
@@ -20,29 +20,43 @@ $args = array(
 
 $authors_query = new WP_Query( $args );
 ?>
-
 <div class="blogs-container">
-  <main id="primary" class="site-main blogs-maincontent">
-    <h2 class="blogs-maincontent__heading"><span class="blogs-heading__text">LET'S BLOG</span></h2>
-    <div class="blogs-body">
-      <?php
-        if( $authors_query -> have_posts() ) {
-          while( $authors_query -> have_posts() ) {
-            $authors_query -> the_post();
-            get_template_part( 'template-parts/content', 'blog-template' );
-          }
-        }
-        else {
-          ?>
-          <p>
-            <?php esc_html_e( 'Sorry, no posts found.', 'design-fly' ); ?>
-          </p>
-          <?php
-        }
-      ?>
-    </div>
-  </main>
-  <div class="blogs-sidebar">
+	<main id="primary" class="site-main">
+
+		<?php if ( $authors_query -> have_posts() ) : ?>
+
+			<header class="page-header">
+				<?php
+				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				the_archive_description( '<div class="archive-description">', '</div>' );
+				?>
+			</header><!-- .page-header -->
+
+			<?php
+			/* Start the Loop */
+			while ( $authors_query -> have_posts() ) :
+				$authors_query -> the_post();
+
+				/*
+				 * Include the Post-Type-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content', 'blog-template' );
+
+			endwhile;
+
+			the_posts_navigation();
+
+		else :
+
+			get_template_part( 'template-parts/content', 'none' );
+
+		endif;
+		?>
+
+	</main><!-- #main -->
+	<div class="blogs-sidebar">
     <?php get_sidebar(); ?>
   </div>
 </div>
