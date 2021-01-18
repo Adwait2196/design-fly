@@ -14,7 +14,7 @@
           <span class="blog-date__day"><?php echo get_the_date( 'd' ); ?></span>
           <span class="blog-date__month"><?php echo get_the_date( 'M' ); ?></span>
         </div>
-        <h2 class="blog-head__heading"><?php esc_attr_e( the_title() ); ?></h2>
+        <h2 class="blog-head__heading"><span class="blog-head__headingtxt"><?php esc_attr_e( the_title() ); ?></span></h2>
       </div>
     </a>
     <div class="blog-body">
@@ -31,7 +31,6 @@
                 </p>
                 <p class="blog-content__comments"><span class="blog-content__cmnt"><?php echo get_comments_number(); ?>Comments(s)</span></p>
             </div>
-            <hr class="horizontal-bar1"/>
             <div class="blog-content__info">
               <?php
                 $excerpt_value = substr( get_the_excerpt(), 0, 225 ) . '...';
@@ -51,7 +50,6 @@
                 </p>
                 <p class="blog-content__comments"><span class="blog-content__cmnt"><?php echo get_comments_number(); ?>Comments(s)</span></p>
             </div>
-            <hr class="horizontal-bar1"/>
             <div class="blog-content__info">
               <?php
                 $excerpt_value = substr( get_the_excerpt(), 0, 275 ) . '...';
