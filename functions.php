@@ -181,9 +181,18 @@ require get_template_directory() . '/inc/customizer.php';
 /**
 *	Portfolio custom widget.
 */
-require get_template_directory() . '/inc/widgets.php';
+require get_template_directory() . '/inc/portfolio-widgets.php';
 add_action( 'widgets_init', function() {
   register_widget( 'Designfly_Portfolio_Widget' );
+} );
+
+/**
+* Related posts widget.
+*/
+
+require get_template_directory() . '/inc/related-posts-widget.php';
+add_action( 'widgets_init', function() {
+  register_widget( 'Designfly_Related_Posts_Widget' );
 } );
 
 /**
