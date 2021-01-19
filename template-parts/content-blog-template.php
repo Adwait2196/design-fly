@@ -33,7 +33,7 @@
             </div>
             <div class="blog-content__info">
               <?php
-                $excerpt_value = substr( get_the_excerpt(), 0, 225 ) . '...';
+                $excerpt_value = substr( get_the_excerpt(), 0, 180 ) . '...';
                 esc_html_e( $excerpt_value );
                 echo '<br/><a class="read-more" href="'. get_permalink( get_the_id() ) .'"><span class="read-more__txt">Read More</span></a>';
               ?>
