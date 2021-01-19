@@ -33,7 +33,7 @@ if ( post_password_required() ) {
 					) );
 				?>
 			</ol>
-			<hr/>
+			<hr class="horizontal-bar1"/>
 			<p class="post-comment"><?php esc_html_e( 'Post your comment', 'design-fly' ); ?></p>
 			<?php
 			the_comments_navigation();
