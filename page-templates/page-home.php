@@ -36,7 +36,7 @@
       if( $home_query -> have_posts() ) {
         while( $home_query -> have_posts() ) {
           $home_query -> the_post();
-          echo '<a href="'.esc_attr( get_permalink() ).'">';
+          echo '<a href="'.esc_attr( get_permalink() ).'" class="portfolio-home__links">';
           echo '<img class="portfolio-home__images" src="'. get_the_post_thumbnail_url() .'"/>';
           echo '</a>';
         }
