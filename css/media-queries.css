@@ -106,20 +106,8 @@
 
   /* Post page styling */
   .post-structure {
-    padding-right: 0;
-    width: 950px;
-  }
-
-  .post-maincontent {
-    width: 65%;
-    padding: 0;
-    padding-right: 3%;
-  }
-
-  .post-sidebar {
-    width: 35%;
-    padding: 0;
-    padding-left: 3%;
+    max-width: 950px;
+    grid-template-columns: 65% 30%;
   }
 
   .comments-area .form-submit #submit {
@@ -130,6 +118,14 @@
   /* Pagination styling */
   .pagination-on__smallscreens {
     display: none;
+  }
+
+  /* Widget area styling */
+  .portfolio-widgcontainer {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
@@ -270,18 +266,8 @@
 
   /* Single Post Styling */
   .post-structure {
-    padding-right: 0;
     width: 750px;
-  }
-
-  .post-maincontent {
-    width: 65%;
-    padding-right: 3%;
-  }
-
-  .post-sidebar {
-    width: 35%;
-    padding-left: 3%;
+    grid-template-columns: 65% 30%;
   }
 }
 
@@ -503,15 +489,12 @@
 
   /* Single Post Styling */
   .post-structure {
-    width: 100%;
-  }
-
-  .post-maincontent {
+    grid-template-columns: 1fr;
     width: 95%;
-  }
-
-  .post-sidebar {
-    display: none;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .entry-meta {
@@ -753,15 +736,12 @@
 
   /* Single Post Styling */
   .post-structure {
+    grid-template-columns: 1fr;
     width: 370px;
-  }
-
-  .post-maincontent {
-    width: 100%;
-  }
-
-  .post-sidebar {
-    display: none;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .entry-meta {
